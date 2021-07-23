@@ -8,21 +8,19 @@ namespace ByteBank.Funcionarios
 {
     public class Auxiliar : Funcionario
     {
-        public Auxiliar(string cpf) : base(cpf, 2000)
+        private const double _salario = 2000;
+        private const double _taxaBonificacao = 0.20;
+        private const double _aumentarSalario = 1.10;
+        public Auxiliar(string cpf) : base(cpf, _salario, _taxaBonificacao, _aumentarSalario)
         {
 
         }
 
-        public override void AumentarSalario()
-        {
-            // Salario = Salario + (Salario * 0.1);
-            // Salario = Salario * 1.1;
-            Salario *= 1.10;
-        }
-
-        public override double GetBonificacao()
-        {
-            return Salario * 0.20;
-        }
+        //public override void AumentarSalario()
+        //{
+        //   Salario = Salario + (Salario * 0.1);
+        //   Salario = Salario * 1.1;
+        //   Salario *= 1.10;
+        //}
     }
 }

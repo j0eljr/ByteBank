@@ -9,21 +9,12 @@ namespace ByteBank.Funcionarios
 {
     public class GerenteDeConta : FuncionarioAutenticavel
     {
-        public GerenteDeConta(string cpf) : base(cpf, 4000)
+        private const double _salario = 4000;
+        private const double _taxaBonificacao = 0.25;
+        private const double _aumentarSalario = 1.05;
+        public GerenteDeConta(string cpf) : base(cpf, _salario, _taxaBonificacao, _aumentarSalario)
         {
             
-        }
-
-        public override void AumentarSalario()
-        {
-            // Salario = Salario + (Salario * 0.1);
-            // Salario = Salario * 1.1;
-            Salario *= 1.05;
-        }
-
-        public override double GetBonificacao()
-        {
-            return Salario * 0.25;
         }
     }
 }

@@ -10,18 +10,12 @@ namespace ByteBank.Funcionarios
     {
         private const double _salario = 3000;
         private const double _taxaBonificacao = 0.17;
-        public Designer(string cpf) : base(cpf, _salario, _taxaBonificacao)
+        private const double _aumentarSalario = 1.11;
+        public Designer(string cpf) : base(cpf, _salario, _taxaBonificacao, _aumentarSalario)
         {
 
         }
 
         // public override double _taxaBonificacao => 0.17;
-
-        public override void AumentarSalario()
-        {
-            // Salario = Salario + (Salario * 0.1);
-            // Salario = Salario * 1.1;
-            Salario *= 1.11;
-        }
     }
 }

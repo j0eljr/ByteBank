@@ -9,21 +9,27 @@ namespace ByteBank.Funcionarios
         public string Nome { get; set; }
         public string CPF { get; }
         public double Salario { get; protected set; }
-        private readonly double _taxaBonificacao;
         
-        public Funcionario(string cpf, double salario, double taxaBonificacao)
+        private readonly double _taxaBonificacao;
+        private readonly double _aumentarSalario;
+
+        public Funcionario(string cpf, double salario, double taxaBonificacao, double aumentarSalario)
         {
             Console.WriteLine("Criando FUNCIONARIO");
 
             CPF = cpf;
             Salario = salario;
             _taxaBonificacao = taxaBonificacao;
+            _aumentarSalario = aumentarSalario;
             
             TotalDeFuncionarios++;
         }
 
        
-        public abstract void AumentarSalario();
+        public double AumentarSalario()
+        {
+            return Salario * _aumentarSalario;
+        }
 
         public double GetBonificacao()
         {

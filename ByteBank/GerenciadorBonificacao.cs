@@ -2,7 +2,7 @@
 
 namespace ByteBank
 {
-    class GerenciadorBonicacao
+    class GerenciadorBonificacao
     {
         private double _totalBonificacao;
 

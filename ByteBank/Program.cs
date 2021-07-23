@@ -12,7 +12,7 @@ namespace ByteBank
     {
         static void Main(string[] args)
         {
-            //CalcularBonificacao();
+            CalcularBonificacao();
             SistemaInterno sistemaInterno = new SistemaInterno();
 
             Diretor roberta = new Diretor("789123456-99");
@@ -31,7 +31,7 @@ namespace ByteBank
 
         public static void CalcularBonificacao()
         {
-            GerenciadorBonicacao gerenciadorBonificacao = new GerenciadorBonicacao();
+            GerenciadorBonificacao gerenciadorBonificacao = new GerenciadorBonificacao();
 
             Designer pedro = new Designer("123456789-00");
             pedro.Nome = "Pedro";
